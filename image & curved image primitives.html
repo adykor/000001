@@ -6,10 +6,95 @@
 </head>
 
 <body>
-<a-scene>
+    <a-scene>
+        <!-- Asset Management System -->
+        <a-assets>
+            <img id="image1" src="1024x768.jpg">
+            <img id="landscape1" src="landscape1.jpg">
+            <img id="" src="" >
+            <img id="" src="" >
+            <img id="" src="" >
+        </a-assets>
+
+        <!-- Image Primitive | IMG size 1024x768px -->
+        <!-- IMG width (px) = 1m -->
+        <!-- ? IMG height (m) = width (m)/IMG width (px) * IMG height (px) -->
+
+        <a-image src="#landscape1"
+                 position="0 1.5 -3"
+                 width="1"
+                 height="0.75"
+                 scale="3 3 1">
+        </a-image>
+
+        <!-- Curved Image Primitive | SINGLE IMG | IMG size 1024x768 px -->
+        <!-- ? Radius of Arc -->
+        <!-- Width of Arc = 1 m -->
+        <!-- Length of Arc = 1.111 m -->
+        <!-- Angel Subtended by Arc = 90 deg -->
+        <!-- ? IMG height (m) = width (m)/IMG width (px) * IMG height (px) -->
+        <!-- ? 0.833m = 1.111m / 1024px * 768px -->
+        <a-curvedimage src="#landscape1"
+                       theta-length="90"
+                       theta-start="135"
+                       radius="0.707"
+                       height="0.833"
+                       position="0 1.5 0"
+                       scale="3 3 3">
+        </a-curvedimage>
+
+
+        <!-- Curved Image Primitive | 3-IMG LAYOUT | IMG size 1024x768 px -->
+        <!-- ? Radius of Arc -->
+        <!-- Width of Arc DIAMETER = 1 m -->
+        <!-- Length of Each IMG = 0.436 m -->
+        <!-- Angel Subtended by Arc = 180 deg -->
+        <!-- Angle Subtended by each IMG = 50 deg -->
+        <!-- ? IMG height (m) = width (m)/IMG width (px) * IMG height (px) -->
+        <!-- ? 0.327m = 0.436m / 1024px * 768px -->
+        <!-- RIGHT IMAGE -->
+        <a-curvedimage src="#landscape1"
+                       theta-length="50"
+                       theta-start="90"
+                       radius="0.5"
+                       height="0.327"
+                       position="0 1.5 0"
+                       scale="3 3 3">
+        </a-curvedimage>
+
+        <!-- CENTER IMAGE -->
+        <a-curvedimage src="#landscape1"
+                       theta-length="50"
+                       theta-start="155"
+                       radius="0.5"
+                       height="0.327"
+                       position="0 1.5 0"
+                       scale="3 3 3">
+        </a-curvedimage>
+
+        <!-- LEFT IMAGE -->
+        <a-curvedimage src="#landscape1"
+                       theta-length="50"
+                       theta-start="220"
+                       radius="0.5"
+                       height="0.327"
+                       position="0 1.5 0"
+                       scale="3 3 3">
+        </a-curvedimage>
 
 
 
-</a-scene>
+        <!-- Width of Arc Reference
+        <a-box color="red"
+               opacity="0.5"
+               width="3"
+               height="0.1"
+               depth="3"
+               position="0 1.5 -1.5">
+        </a-box>  -->
+
+
+
+    </a-scene>
 </body>
 </html>
