@@ -1,0 +1,30 @@
+"diffuse.tga"
+"normal.tga"
+
+<a-box material="color: #ABE81E;
+                        src: #Venus;
+                        repeat: 2 2;
+                        normal-map: #Venus-NRM;
+                        normal-texture-repeat= 2 2;
+                        normal-scale: 1 -1
+                        roughness: 0.9"
+           width="4" height="4" depth="4"
+           position="2 1.5 -9"
+           scale="1 1 1">
+    </a-box>
+
+    <a-sphere material="color: #0000AA;
+                      roughness: 0.2;
+                      shader: standard"
+                      radius="0.5"
+                      position="-2 1.5 -9">
+            </a-sphere>
+
+            <!-- RED SPHERE | FLAT MATERIAL -->
+            <a-sphere material="color: #AA0000;
+                                roughness: 0.2;
+                                shader: flat;
+                                opacity: 0.5"
+                      radius="0.5"
+                      position="2 1.5 -9">
+            </a-sphere>

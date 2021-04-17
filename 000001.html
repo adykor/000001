@@ -6,19 +6,65 @@
 </head>
 
 <body>
-<a-scene>
-    <!-- Light-Blue Box -->
-    <a-box color="#8EACBB"
-           width="4" height="4" depth="4"
-           position="-2 1.5 -9"
-           src="textures"
-    </a-box>
-    <!-- Brown Box -->
-    <a-box color="#795548"
-           width="4" height="4" depth="4"
-           position="2 1.5 -9">
-    </a-box>
+    <a-scene>
+        <!-- Assert Management System -->
+        <a-assets>
+            <img id="Metal" src="wall-1846969_1920.jpg">
+            <img id="Brick" src="brick-2172682_1920.jpg">
+            <img id="Venus" src="8k_venus_surface - Copy.jpg">
+            <img id="Neptune" src="2k_neptune - Copy.jpg">
+
+        </a-assets>
+
+        <!-- METAL ROOM -->
+        <a-box color="FFFFFF"
+               src="wall-1846969_1920.jpg"
+               normal-map="#Metal"
+               repeat="1 1"
+               normal-texture-repeat="1 1"
+               normal-scale="1 -1"
+               roughness="0.5"
+               width="4" height="4" depth="4"
+               position="-2 1.5 -9"
+               scale="-1 1 1">
+        </a-box>
+
+        <!-- BRICK ROOM -->
+        <a-box color="FFFFFF"
+               src="brick-2172682_1920.jpg"
+               repeat="2 2"
+               normal-map="#Brick"
+               normal-texture-repeat="2 2"
+               normal-scale="1 -1"
+               roughness="0.9"
+               width="4" height="4" depth="4"
+               position="2 1.5 -9"
+               scale="-1 1 1">
+        </a-box>
+
+
+        <!-- BLUE SPHERE | STANDARD MATERIAL -->
+        <a-sphere color="0000AA"
+                  src="2k_neptune - Copy.jpg"
+                  normal-map="#Neptune"
+                  roughness="0.2"
+                  shader="standard"
+                  radius="0.5"
+                  position="-2 1.5 -9">
+        </a-sphere>
+
+        <!-- RED SPHERE | FLAT MATERIAL -->
+        <a-sphere color="AA0000"
+                  roughness="0.2"
+                  shader=standard"
+                  opacity="0.5"
+                  radius="0.5"
+                  position="2 1.5 -9">
+        </a-sphere>
+
+
 </a-scene>
 </body>
 </html>
+
 
