@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Breaking Primitives Down</title>
+        <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    </head>
+
+    <body>
+        <a-scene>
+        <!-- Asset Management System -->
+        <a-assets>
+            <img id="landscape1" src="landscape1.jpg">
+        </a-assets>
+
+
+
+            <!-- PRIMITIVES -->
+            <!-- Under the hood, they are ENTITIES with a semantic name -->
+            <!-- that have a preset bundle of COMPONENTS with default values -->
+            <a-box position="-1 0.5 -4"></a-box>
+
+            <!-- ENTITIES -->
+            <!-- They have no appearance, behavior, or functionality -->
+            <!-- until you attach COMPONENTS to them -->
+            <!-- ENTITY: box -->
+            <a-entity geometry="primitive: box"
+                      material="shader: standard
+                                color: #FFFFFF"
+                      position="1 0.5 -4">
+            </a-entity>
+
+
+            <!-- Modified ENTITY: curved image -->
+            <a-entity geometry="primitive: cylinder"
+                                theta-length="90"
+                                theta-start="135"
+                                radius="0.707"
+                                height="0.833"
+                                open-ended="true"
+                      material="shader: standard"
+                                color="#FFFFFF"
+                                side="double"
+                                src="#landscape1"
+                      position="0 1.5 0"
+                      scale="-1 1 1">
+            </a-entity>
+        </a-scene>
+    </body>
+</html>
